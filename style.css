@@ -1,8 +1,53 @@
 /*
-Theme name: Corner Store
+Theme name: CornerStore
 Description: A WordPress theme for the corner store
 Author: @MrKuchu
 Author URI: https://github.com/MrKuchu
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 */
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------
+
+> Table of Content <
+  0. Setup
+
+/*------------------------------------------------------
+
+
+
+
+
+
+
+
+
+/*------------------ 0. Setup ------------------------*/
+
+:root {
+  --color-font-light: #edf0f1;
+  --color-font-dark: #3e3e3e;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: var(--url-background-image);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
