@@ -9,7 +9,14 @@
 
 function setup() {
 
+  // Theme supports
   add_theme_support( 'title-tag' );
+
+  // Register menus
+  register_nav_menus( array(
+    'primary-menu' => 'Primary Menu',
+    'social-media-menu' => 'Social Media'
+  ) );
 
 } 
 
@@ -36,7 +43,7 @@ function imports() {
   wp_enqueue_style( 'style', get_stylesheet_uri() );
 
   // Scripts imports
-  wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), false, true );
+  wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), false, true );
 
 }
 
@@ -57,4 +64,5 @@ add_action( 'wp_enqueue_scripts', 'imports' );
 * 
 */
 
+require get_template_directory() . '/inc/activate.php';
 require get_template_directory() . '/inc/customizer.php';

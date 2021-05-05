@@ -19,6 +19,7 @@ License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 > Table of Content <
   0. Setup
+  1. Components
 
 /*------------------------------------------------------
 
@@ -32,6 +33,13 @@ License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 /*------------------ 0. Setup ------------------------*/
 
+@font-face { 
+  font-family: 'Poppins-Montserrat'; 
+  font-weight: 400;
+  font-display: swap;
+  src: url('assets/fonts/Poppins-Montserrat.woff2');
+}
+
 :root {
   --color-font-light: #edf0f1;
   --color-font-dark: #3e3e3e;
@@ -43,11 +51,245 @@ License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
   box-sizing: border-box;
 }
 
+html {
+  font-family: 'Poppins-Montserrat', sans-serif;
+  color: var(--color-font-light);
+}
+
 body {
   margin: 0;
   background-image: var(--url-background-image);
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 
+a {
+  color: var(--color-font-light);
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+/*------------------ 1. Components -------------------*/
+
+/* Navbar */
+.navbar-container {
+  padding: 12px 16px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  border-radius: 12px;
+}
+
+.navbar-header {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding-right: 22px;
+  padding-left: 22px;
+  background-color: var(--color-dark);
+  border-radius: 12px;
+}
+
+.custom-logo-link {
+  display: flex;
+  align-content: center;
+  max-width: 200px;
+  max-height: 56px;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.vertical-divider {
+  display: none;
+  height: 32px;
+  margin: 0 15px;
+  border: 1px solid var(--color-font-light);
+  border-radius: 1px;
+}
+
+.navbar-toggler {
+  display: flex;
+  width: 30px;
+  height: 20px;
+  background-image: url('assets/svg/toggler.svg');
+  cursor: pointer;
+}
+
+.navbar-body-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: none;
+  width: 100%;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.navbar-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 76px 24px 19px;
+  background-color: var(--color-light);
+  border: solid 3px var(--color-dark);
+  border-radius: 12px;
+}
+
+.navbar-menu-ul {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.navbar-menu-ul > li:first-of-type > a {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: var(--color-dark);
+  border-radius: 8px;
+}
+
+.horizontal-divider {
+  display: inline-block;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border: 1px solid var(--color-dark);
+}
+
+.social-media-menu > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.social-media-menu > ul > li > a {
+  display: flex;
+  font-size: 0px;
+}
+
+.social-media-menu > ul > li > a:before {
+  content: '';
+  background-size: 100%;
+}
+
+.social-media-menu > ul > li > a[href*="facebook.com"]:before {
+  width: 22px;
+  height: 22px;
+  background-image: url('assets/svg/facebook.svg');
+}
+
+.social-media-menu > ul > li > a[href*="instagram.com"]:before {
+  width: 22px;
+  height: 22px;
+  background-image: url('assets/svg/instagram.svg');
+}
+
+.social-media-menu > ul > li > a[href*="whatsapp.com"]:before {
+  width: 23px;
+  height: 22px;
+  background-image: url('assets/svg/whatsapp.svg');
+}
+
+.social-media-menu > ul > li > a[href*="twitter.com"]:before {
+  width: 28px;
+  height: 22px;
+  background-image: url('assets/svg/twitter.svg');
+}
+
+.social-media-menu > ul > li > a[href*="goo.gl/maps"]:before {
+  width: 17px;
+  height: 22px;
+  background-image: url('assets/svg/location.svg');
+}
+
+@media (min-width: 576px) {
+  .navbar-container {
+    padding: 22px 30px;
+  }
+  .navbar-body-container {
+    padding-top: 22px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    flex-direction: row;
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+  .navbar-header {
+    padding-right: 0px;
+    padding-left: 0px;
+    background-color: transparent;
+  }
+  .vertical-divider {
+    display: inline-block;
+  }
+  .navbar-toggler {
+    display: none;
+  }
+  .navbar-body-container {
+    position: static;
+    display: block;
+    flex-grow: 1;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .navbar-body {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0px;
+    background-color: transparent;
+    border: none;
+  }
+  .horizontal-divider {
+    display: none;
+  }
+}
+
+/* Utilities */
+.unstyled-ul {
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  list-style: none;
+}
+
+.open {
+  display: block !important;
+}
+
+
+
+
+
+
+
+
+/*------------------ 1. Section Header ---------------*/
 
