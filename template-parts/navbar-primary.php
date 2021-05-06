@@ -2,10 +2,10 @@
 
   <nav class="navbar navbar-primary">
 
-    <div class="navbar-header">
+    <div class="navbar-header unselectable">
 
       <?php
-      if ( the_custom_logo() ) {
+      if ( has_custom_logo() ) {
         the_custom_logo();
       } else {
         ?>
@@ -31,6 +31,13 @@
 
         <?php 
         if ( has_nav_menu( 'primary-menu' ) ) {
+          function custom_nav_menus( $items, $args ) {
+            if( $args->theme_location === 'primary-menu' ) {
+              $items = '<li><a href="' . home_url() . '#store">' . __('Store', 'cornerstore') . '</a></li>' . $items;
+            }
+            return $items;
+          } 
+          add_filter( 'wp_nav_menu_items','custom_nav_menus', 10, 2 );
           wp_nav_menu( array(
               'theme_location' => 'primary-menu',
               'container_class' => 'primary-menu',
