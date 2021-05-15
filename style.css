@@ -21,6 +21,7 @@ License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
   0. Setup
   1. Components
   2. Hero Section
+  3. Store Section
 
 /*------------------------------------------------------
 
@@ -95,8 +96,9 @@ span {
 }
 
 .navbar-header {
-  z-index: 1;
+  z-index: 2;
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: space-between;
   height: 100%;
@@ -130,25 +132,36 @@ span {
 }
 
 .navbar-body-container {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  z-index: 1;
   display: none;
-  width: 100%;
-  padding-top: 12px;
-  padding-right: 16px;
-  padding-left: 16px;
+  margin-top: -60px;
 }
 
 .navbar-body {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   padding: 76px 24px 19px;
-  background-color: var(--color-light);
   border: solid 3px var(--color-dark);
   border-radius: 12px;
+  overflow: hidden;
+}
+
+.navbar-body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-dark);
+  filter: brightness(120%);
+}
+
+.navbar-body > * {
+  position: relative;
 }
 
 .navbar-menu-ul {
@@ -224,11 +237,6 @@ span {
   .navbar-container {
     padding: 22px 30px;
   }
-  .navbar-body-container {
-    padding-top: 22px;
-    padding-right: 30px;
-    padding-left: 30px;
-  }
 }
 
 @media (min-width: 992px) {
@@ -249,21 +257,23 @@ span {
     display: none;
   }
   .navbar-body-container {
-    position: static;
-    display: block;
+    display: flex;
     flex-grow: 1;
-    padding-top: 0px;
+    height: 100%;
     padding-right: 0px;
     padding-left: 0px;
+    margin-top: 0px;
   }
   .navbar-body {
     flex-direction: row;
-    align-items: center;
+    flex-grow: 1;
     justify-content: space-between;
-    height: 100%;
     padding: 0px;
     background-color: transparent;
     border: none;
+  }
+  .navbar-body::before {
+    background-color: transparent;
   }
   .horizontal-divider {
     display: none;
@@ -313,7 +323,8 @@ span {
 
 
 
-/*------------------ 1. Section Hero -----------------*/
+
+/*------------------ 2. Hero Section -----------------*/
 
 #hero {
   height: 100vh;

@@ -4,23 +4,8 @@
 
     <div class="navbar-header unselectable">
 
-      <?php
-      if ( has_custom_logo() ) {
-        the_custom_logo();
-      } else {
-        ?>
-        <a href="<?php echo home_url() ?>" class="custom-logo-link" rel="home" aria-current="page">
-          <img 
-            src="<?php echo get_template_directory_uri() . '/assets/svg/logo.svg' ?>" 
-            class="custom-logo"
-          />
-        </a>
-        <?php
-      }
-      ?>
-
+      <?php the_theme_logo() ?>
       <span class="vertical-divider"></span>
-
       <span id="navbar-primary-toggler" class="navbar-toggler"></span>
 
     </div>
@@ -29,55 +14,9 @@
       
       <div class="navbar-body">
 
-        <?php 
-        if ( has_nav_menu( 'primary-menu' ) ) {
-          function custom_nav_menus( $items, $args ) {
-            if( $args->theme_location === 'primary-menu' ) {
-              $items = '<li><a href="' . home_url() . '#store">' . __('Store', 'cornerstore') . '</a></li>' . $items;
-            }
-            return $items;
-          } 
-          add_filter( 'wp_nav_menu_items','custom_nav_menus', 10, 2 );
-          wp_nav_menu( array(
-              'theme_location' => 'primary-menu',
-              'container_class' => 'primary-menu',
-              'menu_class'      => 'unstyled-ul navbar-menu-ul'
-          ) );
-        } else { 
-          ?>
-          <div class="primary-menu">
-            <ul class="unstyled-ul navbar-menu-ul">
-              <li><a href="<?php echo home_url() . '#store' ?>" ><?php _e( 'Store', 'cornerstore' ) ?></a></li>
-              <li><a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) ?>"><?php _e( 'Contact', 'cornerstore' ) ?></a></li>
-              <li><a href="<?php echo get_permalink( get_page_by_path( 'about' ) ) ?>"><?php _e( 'About', 'cornerstore' ) ?></a></li>
-            </ul>
-          </div>
-          <?php 
-        }
-        ?>
-
+        <?php the_theme_primary_menu() ?>
         <span class="horizontal-divider"></span>
-
-        <?php 
-        if ( has_nav_menu( 'social-media-menu' ) ) {
-          wp_nav_menu( array(
-              'theme_location'  => 'social-media-menu',
-              'container_class' => 'social-media-menu',
-              'menu_class'      => 'unstyled-ul'
-          ) );
-        } else { 
-          ?>
-          <div class="social-media-menu">
-            <ul class="unstyled-ul">
-              <li><a href="https://www.facebook.com/" target="_blank"></a></li>
-              <li><a href="https://www.instagram.com/" target="_blank"></a></li>
-              <li><a href="https://api.whatsapp.com/" target="_blank"></a></li>
-              <li><a href="https://goo.gl/maps/uXQogmZRupywRk1A6" target="_blank"></a></li>
-            </ul>
-          </div>
-          <?php 
-        }
-        ?>
+        <?php the_theme_social_media_menu() ?>
 
       </div>
 
