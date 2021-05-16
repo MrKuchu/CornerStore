@@ -15,8 +15,7 @@ function setup() {
   // Register menus
   register_nav_menus( array(
     'primary-menu'      => __( 'Primary Menu', 'cornerstore' ),
-    'social-media-menu' => __( 'Social Media Menu', 'cornerstore' ),
-    'store-menu'        => __( 'Store Menu', 'cornerstore' )
+    'social-media-menu' => __( 'Social Media Menu', 'cornerstore' )
   ) );
 
 } 
@@ -68,3 +67,4 @@ add_action( 'wp_enqueue_scripts', 'imports' );
 require get_template_directory() . '/inc/activate.php';
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/cornerstore.php';
+require get_template_directory() . '/inc/product.php';

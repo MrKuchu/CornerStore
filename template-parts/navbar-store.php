@@ -1,4 +1,4 @@
-<div class="navbar-container">
+<div class="navbar-container navbar-store">
 
   <nav class="navbar">
 
@@ -6,17 +6,17 @@
 
       <?php the_theme_logo() ?>
       <span class="vertical-divider"></span>
-      <span id="navbar-primary-toggler" class="navbar-toggler"></span>
+      <span id="navbar-store-toggler" class="navbar-toggler"></span>
 
     </div>
   
-    <div class="navbar-body-container" id="navbar-primary-body-container">
+    <div class="navbar-body-container" id="navbar-store-body-container">
       
       <div class="navbar-body">
 
-        <?php the_theme_primary_menu() ?>
+        <?php the_theme_store_categories_menu() ?>
         <span class="horizontal-divider"></span>
-        <?php the_theme_social_media_menu() ?>
+        <?php the_theme_store_search_bar() ?>
 
       </div>
 
