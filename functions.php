@@ -15,7 +15,8 @@ function setup() {
   // Register menus
   register_nav_menus( array(
     'primary-menu'      => __( 'Primary Menu', 'cornerstore' ),
-    'social-media-menu' => __( 'Social Media Menu', 'cornerstore' )
+    'social-media-menu' => __( 'Social Media Menu', 'cornerstore' ),
+    'footer-menu'       => __( 'Footer', 'cornerstore' )
   ) );
 
 } 

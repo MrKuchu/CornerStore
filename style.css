@@ -655,3 +655,35 @@ input {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+
+
+
+
+
+
+
+
+/*------------------ 5. Footer Section ---------------*/
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 60px;
+  background-color: var(--color-dark);
+}
+
+.footer-menu > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-left: 0px;
+  list-style: none;
+  margin: 0px 60px;
+}
+
+.footer-menu > ul > li > a {
+  color: var(--color-font-light);
+  text-decoration: none;
+  margin-right: 12px;
+  margin-left: 12px;
+}
