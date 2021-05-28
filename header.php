@@ -10,6 +10,6 @@
 
 <body>
 
-<header>
+<header class="container-xxl">
   <?php get_template_part( 'template-parts/navbar-primary' ) ?>
 </header> 

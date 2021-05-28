@@ -1,18 +1,18 @@
-<div class="navbar-container">
+<div class="navbar">
 
-  <nav class="navbar">
+  <nav class="navbar-container">
 
-    <div class="navbar-header unselectable">
+    <div class="navbar-header">
 
       <?php the_theme_logo() ?>
       <span class="vertical-divider"></span>
-      <span id="navbar-primary-toggler" class="navbar-toggler"></span>
+      <span id="navbar-primary-toggler" class="burger-menu-icon"></span>
 
     </div>
   
-    <div class="navbar-body-container" id="navbar-primary-body-container">
+    <div class="navbar-body" id="navbar-primary-body">
       
-      <div class="navbar-body">
+      <div class="navbar-body-container justify-content-between unselectable">
 
         <?php the_theme_primary_menu() ?>
         <span class="horizontal-divider"></span>

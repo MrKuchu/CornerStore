@@ -98,8 +98,6 @@ class product {
         <option <?php if ( $size === '1x2' ) { echo 'selected'; } ?> value="1x2">1 x 2</option>
         <option <?php if ( $size === '2x1' ) { echo 'selected'; } ?> value="2x1">2 x 1</option>
         <option <?php if ( $size === '2x2' ) { echo 'selected'; } ?> value="2x2">2 x 2</option>
-        <option <?php if ( $size === '3x1' ) { echo 'selected'; } ?> value="3x1">3 x 1</option>
-        <option <?php if ( $size === '3x2' ) { echo 'selected'; } ?> value="3x2">3 x 2</option>
       </select>
     </div>
     <?php
@@ -198,7 +196,7 @@ class product {
     $products = $wpdb->get_results( "SELECT post_title AS title, `guid` AS `url` FROM wp_posts WHERE post_status = 'publish' AND post_type = 'product' AND post_title LIKE'" . $_POST['keyword'] . "%' LIMIT 10" );
     foreach($products as $product) {
       ?>
-      <a href="<?php echo $product->url ?>"><?php echo $product->title ?></a>
+      <a href="<?php echo $product->url . '#store' ?>"><?php echo $product->title ?></a>
       <?php
     }
     die();

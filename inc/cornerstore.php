@@ -41,13 +41,12 @@ function the_theme_primary_menu() {
   if ( has_nav_menu( 'primary-menu' ) ) {
     wp_nav_menu( array(
         'theme_location' => 'primary-menu',
-        'container_class' => 'primary-menu',
-        'menu_class'      => 'unstyled-ul navbar-menu-ul'
+        'menu_class'     => 'navbar-menu-ul unstyled-ul'
     ) );
   } else { 
     ?>
     <div class="primary-menu">
-      <ul class="unstyled-ul navbar-menu-ul">
+      <ul class="navbar-menu-ul unstyled-ul">
         <li><a href="<?php echo home_url() . '#store' ?>" ><?php _e( 'Store', 'cornerstore' ) ?></a></li>
         <li><a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) ?>"><?php _e( 'Contact', 'cornerstore' ) ?></a></li>
         <li><a href="<?php echo get_permalink( get_page_by_path( 'about' ) ) ?>"><?php _e( 'About', 'cornerstore' ) ?></a></li>
@@ -62,13 +61,12 @@ function the_theme_social_media_menu() {
   if ( has_nav_menu( 'social-media-menu' ) ) {
     wp_nav_menu( array(
         'theme_location' => 'social-media-menu',
-        'container_class' => 'social-media-menu',
-        'menu_class'      => 'unstyled-ul'
+        'menu_class'     => 'social-media-menu-ul unstyled-ul'
       ) );
   } else { 
     ?>
-    <div class="social-media-menu">
-      <ul class="unstyled-ul">
+    <div>
+      <ul class="social-media-menu-ul unstyled-ul">
         <li><a href="https://www.facebook.com/" target="_blank"></a></li>
         <li><a href="https://www.instagram.com/" target="_blank"></a></li>
         <li><a href="https://api.whatsapp.com/" target="_blank"></a></li>
@@ -170,9 +168,9 @@ function the_theme_products( $args ) {
         <figure>
           <?php 
           if ( has_post_thumbnail() ) {
-            the_post_thumbnail( 'large' );
+            the_post_thumbnail( 'product-' . get_post_meta( $post_id, '_product_size', true ) );
           } else {
-            echo '<img width="1024" height="768" src="'. get_post_meta( $post_id, '_product_default_image_url', true ) .'" class="attachment-large size-large wp-post-image" alt="" loading="lazy" >';
+            echo '<img width="660" height="442" src="'. get_post_meta( $post_id, '_product_default_image_url', true ) .'" class="attachment-large size-large wp-post-image" alt="" loading="lazy" >';
           }
           ?>
         </figure>
@@ -208,7 +206,7 @@ function the_theme_footer() {
   } else { 
     ?>
     <footer>
-      <div class="footer-menu">
+      <div class="footer-menu container-xxl">
         <ul>
           <li><a href="<?php echo home_url() . '/#store' ?>" target="_blank"><?php _e( 'Store', 'cornerstore' ) ?></a></li>
           <li><a href="<?php echo home_url() . '/contact' ?>" target="_blank"><?php _e( 'Contact', 'cornerstore' ) ?></a></li>

@@ -19,6 +19,12 @@ function setup() {
     'footer-menu'       => __( 'Footer', 'cornerstore' )
   ) );
 
+  // Image sizes
+  add_image_size('product-1x1', 320, 200, true);
+  add_image_size('product-1x2', 320, 422, true);
+  add_image_size('product-2x1', 660, 200, true); 
+  add_image_size('product-2x2', 660, 422, true); 
+
 } 
 
 add_action( 'after_setup_theme', 'setup' );
