@@ -29,8 +29,8 @@ License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
   4. Hero Section
   5. Store Section
   6. Product Section
-  7. About Section
-  8. Contact Section
+  7. Contact Section
+  8. About Section
   9. Footer Section
 
 /*------------------------------------------------------
@@ -192,7 +192,7 @@ input {
 .navbar {
   display: flex;
   align-items: center;
-  height: 84px;
+  height: 104px;
   padding-right: 16px;
   padding-left: 16px;
 }
@@ -207,7 +207,7 @@ input {
 }
 
 .navbar .navbar-header {
-  z-index: 2;
+  z-index: 4;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -226,7 +226,7 @@ input {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
   display: none;
   width: 100%;
   padding: 73px 17px 16px;
@@ -244,7 +244,6 @@ input {
 @media (min-width: 576px) {
 
   .navbar {
-    height: 104px;
     padding-right: 30px;
     padding-left: 30px;
   }
@@ -374,6 +373,101 @@ input {
 
 
 
+
+
+
+
+
+
+/*-------- 2.5 Components: Section Card -------------*/
+
+.section-card .section-card-header{
+  position: relative;
+  display: flex;
+  z-index: 2;
+}
+
+.section-card .tab {
+  margin-bottom: -2px;
+  margin-left: 16px;
+}
+
+.section-card .tab h3 {
+  margin: 0px 16px 6px;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.section-card .tab span {
+  display: flex;
+  width: 100%;
+  background-color: var(--color-dark);
+  border: 2px solid var(--color-dark);
+  border-radius: 2px;
+}
+
+.section-card .section-card-body {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.section-card .section-card-body .item {
+  padding: 18px 20px 22px;
+  background-color: var(--color-dark);
+  border-radius: 6px;
+}
+
+.section-card .section-card-body .item-title {
+  display: flex;
+  gap: 8px;
+}
+
+.section-card .section-card-body .whatsapp .item-title::before {
+  content: '';
+  width: 23px;
+  height: 22px;
+  background-image: url(assets/svg/whatsapp.svg);
+}
+
+.section-card .section-card-body .facebook .item-title::before {
+  content: '';
+  width: 22px;
+  height: 22px;
+  background-image: url(assets/svg/facebook.svg);
+}
+
+.section-card .section-card-body .instagram .item-title::before {
+  content: '';
+  width: 22px;
+  height: 22px;
+  background-image: url(assets/svg/instagram.svg);
+}
+
+.section-card .section-card-body .twitter .item-title::before {
+  content: '';
+  width: 28px;
+  height: 22px;
+  background-image: url(assets/svg/twitter.svg);
+}
+
+.section-card .section-card-body .email .item-title::before {
+  content: '';
+  width: 25px;
+  height: 21px;
+  background-image: url(assets/svg/email.svg);
+}
+
+.section-card .section-card-body .location .item-title::before {
+  content: '';
+  width: 17px;
+  height: 22px;
+  background-image: url(assets/svg/location.svg);
+}
 
 
 
@@ -814,10 +908,10 @@ input {
 .related-products > h4::after {
   content: '';
   width: 100%;
-  border: 2px solid var(--color-dark);
-  background-color: var(--color-dark);
-  border-radius: 2px;
   margin-top: 2px;
+  background-color: var(--color-dark);
+  border: 2px solid var(--color-dark);
+  border-radius: 2px;
 }
 
 .related-products-container {
@@ -904,6 +998,178 @@ input {
 }
 
 
+
+
+
+
+
+
+
+/*-------- 7. Contact Section ------------------------*/
+
+#contact {
+  display: grid;
+  flex-direction: column;
+  padding-right: 24px;
+  padding-bottom: 22px;
+  padding-left: 24px;
+}
+
+#contact .contact-info .section-card-body {
+  background-color: var(--color-light);
+}
+
+#contact .contact-location {
+  margin-top: 52px;
+  margin-bottom: 52px;
+}
+
+#contact .contact-location .section-card-body {
+  padding: 0px;
+}
+
+#contact .contact-location .section-card-body iframe {
+  width: 100%;
+}
+
+#contact .contact-gallery .section-card-body {
+  display: grid;
+  grid-template-rows: 200px;
+  grid-auto-rows: 200px;
+  grid-template-columns: 1fr;
+  row-gap: 22px;
+  column-gap: 0px;
+  padding: 20px 0px;
+}
+
+#contact .contact-gallery .section-card-body img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@media (min-width: 768px) {
+
+  #contact {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto 418px;
+    column-gap: 22px;
+  }
+
+  #contact .contact-location {
+    max-width: 660px;
+    height: 442px;
+    flex-shrink: 0;
+    order: 1;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  #contact .contact-info {
+    position: sticky;
+    top: 10px;
+    flex-grow: 1;
+    height: 500px;
+    margin-top: 0px;
+    order: 2;
+  }
+
+  #contact .contact-gallery {
+    order: 3;
+  }
+
+  #contact .contact-gallery .section-card-body {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 22px;
+  }
+
+}
+
+@media (min-width: 1120px) {
+
+  #contact {
+    grid-template-columns: 660px auto;
+    max-width: 1220px;
+    flex-shrink: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/*-------- 8. About Section --------------------------*/
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+#about .copy {
+  display: flex;
+  flex-direction: column;
+  max-width: 440px;
+  margin-bottom: 60px;
+}
+
+#about .copy .text {
+  text-align: center;
+}
+
+#about .copy .text h3 {
+  margin-top: 0px;
+  margin-bottom: 6px;
+}
+
+#about .copy .text p {
+  margin-top: 0px;
+  margin-bottom: 12px;
+}
+
+#about .copy img {
+  width: 100%;
+  height: 260px;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+@media (min-width: 992px) {
+
+  #about {
+    padding-top: 30px;
+  }
+
+  #about .copy {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    max-width: 100%;
+  }
+
+
+  #about .copy .text,
+  #about .copy img {
+    width: 440px;
+  }
+
+  #about .copy-2 .text,
+  #about .copy-4 .text {
+    order: 1;
+  }
+
+}
 
 
 

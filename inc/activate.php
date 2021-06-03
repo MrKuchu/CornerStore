@@ -11,7 +11,7 @@
 function activate() {
 
   // Unset post per page option
-  update_option( 'posts_per_page', -1 );
+  update_option( 'posts_per_page', 100 );
 
   // About page
   $about_page = get_posts( array( 
