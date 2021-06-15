@@ -487,6 +487,7 @@ input {
   display: none;
   height: 32px;
   margin: 0 15px;
+  background-color: var(--color-font-light);
   border: 1px solid var(--color-font-light);
   border-radius: 1px;
 }
@@ -529,6 +530,7 @@ input {
   width: 100%;
   margin-top: 16px;
   margin-bottom: 16px;
+  background-color: var(--color-dark);
   border: 1px solid var(--color-dark);
 }
 
@@ -1039,7 +1041,7 @@ input {
   grid-template-columns: 1fr;
   row-gap: 22px;
   column-gap: 0px;
-  padding: 20px 0px;
+  padding: 0px;
 }
 
 #contact .contact-gallery .section-card-body img {
@@ -1049,40 +1051,48 @@ input {
   border-radius: 12px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
 
   #contact {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: auto 418px;
+    grid-template-columns: 1fr 1fr;
+    padding-right: 30px;
+    padding-bottom: 22px;
+    padding-left: 30px;
     column-gap: 22px;
   }
 
   #contact .contact-location {
-    max-width: 660px;
-    height: 442px;
-    flex-shrink: 0;
-    order: 1;
     margin-top: 0px;
     margin-bottom: 0px;
+    order: 1;
   }
 
   #contact .contact-info {
     position: sticky;
-    top: 10px;
-    flex-grow: 1;
-    height: 500px;
-    margin-top: 0px;
+    top: 10px; 
     order: 2;
   }
 
   #contact .contact-gallery {
+    margin-top: -60px;
     order: 3;
   }
 
-  #contact .contact-gallery .section-card-body {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 22px;
+}
+
+@media (min-width: 768px) {
+
+  #contact {
+    grid-template-columns: auto 343px;
+  }
+
+}
+
+@media (min-width: 768px) {
+  
+  #contact {
+    padding-right: 60px;
+    padding-left: 60px;
   }
 
 }
@@ -1090,9 +1100,7 @@ input {
 @media (min-width: 1120px) {
 
   #contact {
-    grid-template-columns: 660px auto;
     max-width: 1220px;
-    flex-shrink: 0;
     margin-right: auto;
     margin-left: auto;
   }
@@ -1112,6 +1120,7 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 50px;
   padding-right: 30px;
   padding-left: 30px;
 }
@@ -1120,7 +1129,7 @@ input {
   display: flex;
   flex-direction: column;
   max-width: 440px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 #about .copy .text {
@@ -1146,10 +1155,6 @@ input {
 }
 
 @media (min-width: 992px) {
-
-  #about {
-    padding-top: 30px;
-  }
 
   #about .copy {
     flex-direction: row;
