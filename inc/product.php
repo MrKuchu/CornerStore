@@ -1,11 +1,10 @@
 <?php
 
-/*
-* Product Post Type.
-* This adds a new post type for store products,
-* taxonomies and manage his administrator view.
-* 
-*/
+/**
+ * Product Post Type.
+ * This adds a new post type for store products,
+ * taxonomies and manage his administrator view.
+ */
 
 class product {
 
@@ -23,9 +22,9 @@ class product {
   }
 
   /*
-  * Register an manage the product post type and his 
-  * taxonomies.
-  */
+   * Register an manage the product post type and his 
+   * taxonomies.
+   */
   public function product_post_type() {
     // Post Type
     register_post_type( 'product', array(
@@ -56,8 +55,8 @@ class product {
   }
 
   /* 
-  * Execute when product is save
-  */
+   * Execute when product is save
+   */
   public function save_product( $post_id ) {
 
     if ( isset( $_POST['_product_price'] ) ) {
@@ -65,10 +64,10 @@ class product {
     } else {
       add_post_meta( $post_id, '_product_price', $_POST['_product_price'], true );
     }
-    if ( isset( $_POST['_product_size'] ) ) {
-      update_post_meta( $post_id, '_product_size', $_POST['_product_size'] );
+    if ( isset( $_POST['_product_grid_size'] ) ) {
+      update_post_meta( $post_id, '_product_grid_size', $_POST['_product_grid_size'] );
     } else {
-      add_post_meta( $post_id, '_product_size', $_POST['_product_size'], true );
+      add_post_meta( $post_id, '_product_grid_size', $_POST['_product_grid_size'], true );
     }
     if ( !isset( $_POST['_product_default_image_url'] ) ) {
       add_post_meta( $post_id, '_product_default_image_url', 'https://i.imgur.com/PJ64ZZk.jpg', true );
@@ -77,22 +76,22 @@ class product {
   }
 
   /* 
-  * Add meta boxes to the product post type 
-  */
+   * Add meta boxes to the product post type 
+   */
   public function product_info_meta_box() {
     add_meta_box( 'product_info', __( 'Product Info', 'cornerstore'), [$this, 'product_info_meta_box_html'], ['product'], 'side', 'default' );
   }
   public function product_info_meta_box_html( $post ) {
     $price = get_post_meta( $post->ID, '_product_price', true );
-    $size = get_post_meta( $post->ID, '_product_size', true );
+    $size = get_post_meta( $post->ID, '_product_grid_size', true );
     ?>
     <div class="components-base-control__field">
       <label for="_product_price" class="components-base-control__label"><?php _e( 'Price', 'cornerstore' ) ?></label>
       <input name="_product_price" id="_product_price" type="number" class="components-text-control__input" value="<?php echo $price ?>" >
     </div><br>
     <div class="components-base-control__field" style="margin-bottom: 300px">
-      <label for="_product_size" class="components-base-control__label"><?php _e( 'Size', 'cornerstore' ) ?></label>
-      <select name="_product_size" id="_product_size">
+      <label for="_product_grid_size" class="components-base-control__label"><?php _e( 'Grid size', 'cornerstore' ) ?></label>
+      <select name="_product_grid_size" id="_product_grid_size">
         <option ><?php _e( ' - Select One - ' ) ?></option>
         <option <?php if ( $size === '1x1' ) { echo 'selected'; } ?> value="1x1">1 x 1</option>
         <option <?php if ( $size === '1x2' ) { echo 'selected'; } ?> value="1x2">1 x 2</option>
@@ -104,9 +103,9 @@ class product {
   }
 
   /* 
-  * Filter the columns to be displayed in the Product 
-  * admin view.
-  */
+   * Filter the columns to be displayed in the Product 
+   * admin view.
+   */
   public function products_columns( $columns ) {
     $columns = array(
       'cb'    => $columns['cb'],
@@ -119,8 +118,8 @@ class product {
   }
 
   /*
-  * Add the data to the new columns.
-  */
+   * Add the data to the new columns.
+   */
   public function products_column( $column, $post_id ) {
     switch( $column ) {
       case 'price':
@@ -133,8 +132,8 @@ class product {
   }
 
   /*
-  * Make columns sortable.
-  */
+   * Make columns sortable.
+   */
   public function products_sortable_columns( $columns ) {
     $columns['price'] = 'price';
     $columns['order'] = 'order';
@@ -142,8 +141,8 @@ class product {
   }
 
   /*
-  * Manage sortable columns.
-  */
+   * Manage sortable columns.
+   */
   public function products_order_filters( $query ) {
     $orderby = $query->get( 'orderby' );
     switch( $orderby ) {
@@ -158,9 +157,9 @@ class product {
   }
 
   /* 
-  * Add the AJAX fetch for the search bar on the 
-  * store section of the front-page on the footer.
-  */
+   * Add the AJAX fetch for the search bar on the 
+   * store section of the front-page on the footer.
+   */
   public function add_products_fetch() { ?>
     <script type="text/javascript">
       function productKeywordFetch() {

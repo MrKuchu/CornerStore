@@ -1,10 +1,15 @@
 /*
 Theme name: CornerStore
-Description: A WordPress theme for the corner store
+Theme URI: https://github.com/MrKuchu/CornerStore
 Author: @MrKuchu
 Author URI: https://github.com/MrKuchu
+Description: A WordPress theme for the corner store. make your store and your products known to those who visit your website. This theme has a beautiful and responsive design allowing you to choose the colors of your preference that match the visual identity of your store. If you like You can contribute to the development of CornerStore, feel free to check the code at https://github.com/MrKuchu/CornerStore
+Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Text Domain: cornerstore
+Tags: custom-background, custom-colors, custom-menu, custom-logo, featured-images, translation-ready
+
 */
 
 
@@ -15,27 +20,25 @@ License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 
 
-/*------------------------------------------------------
+/*--------------------------------------------------------------
 
 > Table of Content <
 
-  0. Setup
-  1. Utilities
-  2. Components
-    2.1 Navbar
-    2.2 Card
+  - Setup
+  - Utilities
+  - Components
+    - Navbar
+    - Card
 
-  3. Header Section
-  4. Hero Section
-  5. Store Section
-  6. Product Section
-  7. Contact Section
-  8. About Section
-  9. Footer Section
+  - Header Section
+  - Hero Section
+  - Store Section
+  - Product Section
+  - Contact Section
+  - About Section
+  - Footer Section
 
-/*------------------------------------------------------
-
-
+/*--------------------------------------------------------------
 
 
 
@@ -43,7 +46,14 @@ License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 
 
-/*-------- 0. Setup ----------------------------------*/
+
+
+/**
+ * Setup
+ * 
+ * Add variables and fonts.
+ * Reassign default styles of HTML tags.
+ */
 
 :root {
   --color-font-light: #edf0f1;
@@ -112,6 +122,11 @@ input {
 /* Flex */
 .justify-content-between {
   justify-content: space-between !important;
+}
+
+/* Box Model */
+.vh-100 {
+  height: 100vh;
 }
 
 /* Containers */

@@ -1,11 +1,7 @@
 <?php
-
 /*
-* CSS Variables.
-* 
-* Initializing variables to be used in CSS
-* 
-*/
+ * Initialize variables to be used in CSS
+ */
 
 ?>
 

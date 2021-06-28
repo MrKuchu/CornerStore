@@ -1,21 +1,26 @@
 <?php
 
-/*
-* Activate.
-* 
-* Here are functions that run only once when the 
-* theme is activated.
-* 
-*/
+/**
+ * Activate.
+ * 
+ * Here are functions that run only once when the 
+ * theme is activated.
+ * 
+ */
 
 function activate() {
 
-  // Unset post per page option
-  update_option( 'posts_per_page', 100 );
+  // Reset post per page option
+  update_option( 'posts_per_page', 200 );
 
-  // About page
+  // Create pages if they don't exist
   $about_page = get_posts( array( 
     'name'           => 'about', 
+    'post_type'      => 'page',
+    'post_status'    => 'publish',
+  ) );
+  $contact_page = get_posts( array( 
+    'name'           => 'contact', 
     'post_type'      => 'page',
     'post_status'    => 'publish',
   ) );
@@ -28,13 +33,6 @@ function activate() {
       'post_name'     => 'about'
     ) );
   }
-
-  // Contact page
-  $contact_page = get_posts( array( 
-    'name'           => 'contact', 
-    'post_type'      => 'page',
-    'post_status'    => 'publish',
-  ) );
   if ( $contact_page === array() ) {
     wp_insert_post( array(
       'post_title'    => __( 'Contact', 'cornerstore' ),
@@ -51,7 +49,7 @@ function activate() {
     'hide_empty' => false
   ) );
   if ( $products_categories === array() ) {
-    require_once( dirname( __FILE__, 5 ) . '\wp-admin\includes\taxonomy.php' );
+    require_once( str_replace( stripslashes( "\\\\" ), "/", dirname( __FILE__, 5 ) ) . '/wp-admin/includes/taxonomy.php' );
     wp_insert_category( array(
       'taxonomy'          => 'products-category',
       'cat_name'          => __( 'Fruits', 'cornerstore' ),
@@ -71,7 +69,7 @@ function activate() {
 
   // Products
   $products = get_posts( array(
-    'numberposts' => -1,
+    'numberposts' => 200,
     'post_type' => 'product'
   ) );
   if ( $products === array() ) {
@@ -114,7 +112,7 @@ function activate() {
         'menu_order'   => $default_product[0],
         'meta_input'   => array( 
           '_product_price' => $default_product[2],
-          '_product_size' => $default_product[3],
+          '_product_grid_size' => $default_product[3],
           '_product_default_image_url' => $default_product[4],
         ),
         'tax_input' => array(

@@ -1,11 +1,10 @@
 <?php
 
 /*
-* Theme Customizer.
-* 
-* Manage the customization view adding extra features to the theme.
-* 
-*/
+ * Theme Customizer.
+ * 
+ * Manage the customization view adding extra features to the theme.
+ */
 
 function customize( $wp_customize ) {
 
@@ -64,7 +63,7 @@ function customize( $wp_customize ) {
       'sanitize_callback' => 'wp_filter_nohtml_kses'
     ) );
     $wp_customize->add_control( 'hero_primary_text', array(
-      'label'    => __( 'Hero primary text', 'cornerstore' ),
+      'label'    => __( 'Primary text', 'cornerstore' ),
       'section'  => 'hero_panel',
       'priority' => 1
     ) );
@@ -75,7 +74,7 @@ function customize( $wp_customize ) {
       'sanitize_callback' => 'wp_filter_nohtml_kses'
     ) );
     $wp_customize->add_control( 'hero_secondary_text', array(
-      'label'    => __( 'Hero secondary text', 'cornerstore' ),
+      'label'    => __( 'Secondary text', 'cornerstore' ),
       'section'  => 'hero_panel',
       'priority' => 2,
       'type'     => 'textarea'
@@ -460,7 +459,7 @@ function customize( $wp_customize ) {
 
     // Text 4: Title
     $wp_customize->add_setting( 'about_title_4', array(
-      'default'           => __( '24/7', 'cornerstore' ),
+      'default'           => '24/7',
       'sanitize_callback' => 'wp_filter_nohtml_kses'
     ) );
     $wp_customize->add_control( 'about_title_4', array(
@@ -498,6 +497,8 @@ function customize( $wp_customize ) {
       )
     ) ) );
   
+
+    
   // Remove Homepage Settings
   $wp_customize->remove_section( 'static_front_page' );
 

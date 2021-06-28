@@ -1,16 +1,27 @@
 <?php
 
-/*
-* Setup.
-* 
-* Setup features that initialize the theme.
-* 
-*/
+
+
+
+
+
+
+
+/**
+ * Setup.
+ * 
+ * Setup features that initialize the theme.
+ */
 
 function setup() {
 
+  // Available for translation
+  load_theme_textdomain( 'cornerstore', get_template_directory() . '/languages' );
+
   // Theme supports
   add_theme_support( 'title-tag' );
+  add_theme_support( 'custom-logo' );
+  add_theme_support( 'post-thumbnails' );
 
   // Register menus
   register_nav_menus( array(
@@ -37,12 +48,11 @@ add_action( 'after_setup_theme', 'setup' );
 
 
 
-/*
-* Imports.
-* 
-* Styles and Scripts imports.
-* 
-*/
+/**
+ * Imports.
+ * 
+ * Styles and Scripts imports.
+ */
 
 function imports() {
 
@@ -64,12 +74,31 @@ add_action( 'wp_enqueue_scripts', 'imports' );
 
 
 
-/*
-* Includes.
-* 
-* Request extra features to the theme.
-* 
-*/
+
+/** 
+ * Others
+ */
+
+// Add extra items to the menus
+
+function primary_menu_extra_item( $items, $args ) {
+  if ( $args->theme_location === 'primary-menu' ) {
+    $items = '<li><a href="'. home_url() .'/#store">' . __( 'Store', 'cornerstore' ) . '</a></li>' . $items;
+    return $items;
+  }
+}
+add_filter( 'wp_nav_menu_items', 'primary_menu_extra_item', 10, 2 );
+
+
+
+
+
+
+/**
+ * Includes.
+ * 
+ * Request extra features to the theme.
+ */
 
 require get_template_directory() . '/inc/activate.php';
 require get_template_directory() . '/inc/customizer.php';

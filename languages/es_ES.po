@@ -1,0 +1,472 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2021-06-28 18:21-0500\n"
+"PO-Revision-Date: 2021-06-28 18:21-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions.php:28
+msgid "Primary Menu"
+msgstr "Menú principal"
+
+#: functions.php:29
+msgid "Social Media Menu"
+msgstr "Menú de Redes Sociales"
+
+#: functions.php:30
+msgid "Footer"
+msgstr "Pie de Página"
+
+#: functions.php:86 template-parts/footer-menu.php:22
+#: template-parts/header-primary-menu.php:20
+#: template-parts/hero-calls-to-action.php:13
+#: template-parts/hero-calls-to-action.php:15
+msgid "Store"
+msgstr "Tienda"
+
+#: inc/activate.php:29 template-parts/footer-menu.php:24
+#: template-parts/header-primary-menu.php:22
+msgid "About"
+msgstr "Nosotros"
+
+#: inc/activate.php:38 page-contact.php:11 template-parts/footer-menu.php:23
+#: template-parts/header-primary-menu.php:21
+msgid "Contact"
+msgstr "Contacto"
+
+#: inc/activate.php:55
+msgid "Fruits"
+msgstr "Frutas"
+
+#: inc/activate.php:60
+msgid "Vegetables"
+msgstr "Verduras"
+
+#: inc/activate.php:65
+msgid "Meats"
+msgstr "Carnes"
+
+#: inc/activate.php:77
+msgid "Bananas"
+msgstr "Bananas"
+
+#: inc/activate.php:78
+msgid "Oranges"
+msgstr "Naranjas"
+
+#: inc/activate.php:79
+msgid "Tomatoes"
+msgstr "Tomates"
+
+#: inc/activate.php:80
+msgid "Lemons"
+msgstr "Limones"
+
+#: inc/activate.php:81
+msgid "Apples"
+msgstr "Manzanas"
+
+#: inc/activate.php:82
+msgid "Avocados"
+msgstr "Aguacates"
+
+#: inc/activate.php:83
+msgid "Beef"
+msgstr "Carne de res"
+
+#: inc/activate.php:84
+msgid "Fish"
+msgstr "Pescado"
+
+#: inc/activate.php:85
+msgid "Shrimp"
+msgstr "Camaron"
+
+#: inc/activate.php:86
+msgid "Blackberries"
+msgstr "Mora"
+
+#: inc/activate.php:87
+msgid "Grapes"
+msgstr "Uvas"
+
+#: inc/activate.php:88
+msgid "Strawberries"
+msgstr "Frutillas"
+
+#: inc/activate.php:89
+msgid "Watermelons"
+msgstr "Sandias"
+
+#: inc/activate.php:90
+msgid "Papayas"
+msgstr "Papayas"
+
+#: inc/activate.php:91
+msgid "Potato"
+msgstr "Papa"
+
+#: inc/activate.php:92
+msgid "Lettuce"
+msgstr "Lechuga"
+
+#: inc/activate.php:93
+msgid "Onion"
+msgstr "Cebolla"
+
+#: inc/activate.php:94
+msgid "Green banana"
+msgstr "Plátano"
+
+#: inc/activate.php:95
+msgid "Carrots"
+msgstr "Zanahoreas"
+
+#: inc/activate.php:96
+msgid "Broccoli"
+msgstr "Brócoli"
+
+#: inc/activate.php:97
+msgid "Cucumber"
+msgstr "Pepino"
+
+#: inc/activate.php:98
+msgid "Bread"
+msgstr "Pan"
+
+#: inc/activate.php:99
+msgid "Rice"
+msgstr "Arroz"
+
+#: inc/activate.php:100
+msgid "Almonds"
+msgstr "Almendras"
+
+#: inc/activate.php:101
+msgid "Milk"
+msgstr "Leche"
+
+#: inc/activate.php:102
+msgid "Eggs"
+msgstr "Huevos"
+
+#: inc/activate.php:103
+msgid "Drinks"
+msgstr "Bebidas"
+
+#: inc/activate.php:104
+msgid "Candies"
+msgstr "Caramelos"
+
+#: inc/activate.php:110
+msgid "Here is the description of your product"
+msgstr "Aquí está la descripción de su producto"
+
+#: inc/cornerstore.php:52 inc/customizer.php:62
+msgid "Your trusted store"
+msgstr "Su tienda de confianza"
+
+#: inc/cornerstore.php:61 inc/customizer.php:73
+msgid ""
+"Find here what you need for your home, feel free to visit us whenever you "
+"like, we’ll be happy to help you. You can also visit us at our shop, we are "
+"waiting for you."
+msgstr ""
+"Encuentra aquí lo que necesitas para tu hogar, no dudes en visitarnos cuando "
+"quieras, estaremos encantados de ayudarte. También puedes visitarnos en "
+"nuestra tienda, te estamos esperando."
+
+#: inc/cornerstore.php:125
+msgid "123 Example St, City, Country"
+msgstr "123 Av. Ejemplo, Ciudad, País"
+
+#: inc/cornerstore.php:217 inc/customizer.php:325
+msgid "You need something?"
+msgstr "¿Necesitas algo?"
+
+#: inc/cornerstore.php:226 inc/customizer.php:336
+msgid ""
+"We take care that your home has everything you always need. We are available "
+"24 hours a day."
+msgstr ""
+"Nos encargamos de que tu hogar tenga todo lo que siempre necesitas. Estamos "
+"disponibles las 24 horas del día."
+
+#: inc/cornerstore.php:244 inc/customizer.php:372
+msgid "About our store?"
+msgstr "¿Sobre nuestra tienda?"
+
+#: inc/cornerstore.php:253 inc/customizer.php:383
+msgid ""
+"We are a small fictitious store that serves as a model for those who use the "
+"CornerStore theme for their website made in WordPress."
+msgstr ""
+"Somos una pequeña tienda ficticia que sirve de modelo para quienes usan el "
+"tema CornerStore para su sitio web hecho en WordPress."
+
+#: inc/cornerstore.php:271 inc/customizer.php:417
+msgid "Vegetables?... Yes"
+msgstr "Verduras? ... Si"
+
+#: inc/cornerstore.php:280 inc/customizer.php:428
+msgid ""
+"We sell all kinds of products, fruits, meats, drinks, candies, but our "
+"specialty is vegetables, our fresh and recently harvested vegetables."
+msgstr ""
+"Vendemos todo tipo de productos, frutas, carnes, bebidas, dulces, pero "
+"nuestra especialidad son las verduras, nuestras verduras frescas y recién "
+"cosechadas."
+
+#: inc/cornerstore.php:307 inc/customizer.php:473
+msgid "We are available 24 hours a day, 7 days a week. We will wait for you."
+msgstr ""
+"Estamos disponibles las 24 horas del día, los 7 días de la semana. "
+"Esperaremos por ti."
+
+#: inc/customizer.php:36
+msgid "Light Color"
+msgstr "Color claro"
+
+#: inc/customizer.php:47
+msgid "Dark Color"
+msgstr "Color oscuro"
+
+#: inc/customizer.php:56
+msgid "Hero Section"
+msgstr "Sección Principal"
+
+#: inc/customizer.php:66
+msgid "Primary text"
+msgstr "Texto Principal"
+
+#: inc/customizer.php:77
+msgid "Secondary text"
+msgstr "Texto secundario"
+
+#: inc/customizer.php:97
+msgid "Store button"
+msgstr "Botón de Tienda"
+
+#: inc/customizer.php:111
+msgid "Chat button"
+msgstr "Botón de chat"
+
+#: inc/customizer.php:125
+msgid "Visit us button"
+msgstr "Botón de Visítanos"
+
+#: inc/customizer.php:145
+msgid "Background Image"
+msgstr "Imagen de fondo"
+
+#: inc/customizer.php:149 inc/customizer.php:261 inc/customizer.php:277
+#: inc/customizer.php:293 inc/customizer.php:309 inc/customizer.php:357
+#: inc/customizer.php:404 inc/customizer.php:449 inc/customizer.php:494
+msgid "Select Image"
+msgstr "Seleccionar imagen"
+
+#: inc/customizer.php:150 inc/customizer.php:262 inc/customizer.php:278
+#: inc/customizer.php:294 inc/customizer.php:310 inc/customizer.php:358
+#: inc/customizer.php:405 inc/customizer.php:450 inc/customizer.php:495
+msgid "Remove Image"
+msgstr "Quita la imagen"
+
+#: inc/customizer.php:151 inc/customizer.php:263 inc/customizer.php:279
+#: inc/customizer.php:295 inc/customizer.php:311 inc/customizer.php:359
+#: inc/customizer.php:406 inc/customizer.php:451 inc/customizer.php:496
+msgid "Change Image"
+msgstr "Cambiar imagen"
+
+#: inc/customizer.php:159
+msgid "Contact Section"
+msgstr "Sección de Contacto"
+
+#: inc/customizer.php:170
+msgid "Phone Number"
+msgstr "Número de teléfono"
+
+#: inc/customizer.php:181 page-contact.php:30
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: inc/customizer.php:199
+msgid "Address"
+msgstr "Dirección"
+
+#: inc/customizer.php:210
+msgid "Google Map URL"
+msgstr "URL del mapa de Google"
+
+#: inc/customizer.php:257
+msgid "Gallery Image 1"
+msgstr "Imagen de la galería 1"
+
+#: inc/customizer.php:273
+msgid "Gallery Image 2"
+msgstr "Imagen de la galería 2"
+
+#: inc/customizer.php:289
+msgid "Gallery Image 3"
+msgstr "Imagen de la galería 3"
+
+#: inc/customizer.php:305
+msgid "Gallery Image 4"
+msgstr "Imagen de la galería 4"
+
+#: inc/customizer.php:319
+msgid "About Section"
+msgstr "Sección de Nosotros"
+
+#: inc/customizer.php:329
+msgid "Title 1"
+msgstr "Título 1"
+
+#: inc/customizer.php:340
+msgid "Paragraph 1"
+msgstr "Párrafo 1"
+
+#: inc/customizer.php:352
+msgid "Image 1"
+msgstr "Imagen 1"
+
+#: inc/customizer.php:376
+msgid "Title 2"
+msgstr "Título 2"
+
+#: inc/customizer.php:387
+msgid "Paragraph 2"
+msgstr "Párrafo 2"
+
+#: inc/customizer.php:399
+msgid "Image 2"
+msgstr "Imagen 2"
+
+#: inc/customizer.php:421
+msgid "Title 3"
+msgstr "Título 3"
+
+#: inc/customizer.php:432
+msgid "Paragraph 3"
+msgstr "Párrafo 3"
+
+#: inc/customizer.php:444
+msgid "Image 3"
+msgstr "Imagen 3"
+
+#: inc/customizer.php:466
+msgid "Title 4"
+msgstr "Título 4"
+
+#: inc/customizer.php:477
+msgid "Paragraph 4"
+msgstr "Párrafo 4"
+
+#: inc/customizer.php:489
+msgid "Image 4"
+msgstr "Imagen 4"
+
+#: inc/product.php:32
+msgid "Products"
+msgstr "Productos"
+
+#: inc/product.php:33
+msgid "Product"
+msgstr "Producto"
+
+#: inc/product.php:34
+msgid "Add New"
+msgstr "Agregar nuevo"
+
+#: inc/product.php:35
+msgid "Search Products"
+msgstr "Buscar Productos"
+
+#: inc/product.php:36
+msgid "No products found"
+msgstr "No se encontraron productos"
+
+#: inc/product.php:37
+msgid "No products found in Trash"
+msgstr "No se han encontrado productos en la papelera"
+
+#: inc/product.php:49
+msgid "Products Category"
+msgstr "Categoría de productos"
+
+#: inc/product.php:50
+msgid "Product Category"
+msgstr "Categoría de producto"
+
+#: inc/product.php:82
+msgid "Product Info"
+msgstr "Información del producto"
+
+#: inc/product.php:89 inc/product.php:113
+msgid "Price"
+msgstr "Precio"
+
+#: inc/product.php:93
+msgid "Grid size"
+msgstr "Tamaño de la cuadrícula"
+
+#: inc/product.php:95
+msgid " - Select One - "
+msgstr "- Seleccione uno -"
+
+#: inc/product.php:112
+msgid "Title"
+msgstr "Título"
+
+#: inc/product.php:114
+msgid "Order"
+msgstr "Orden"
+
+#: inc/product.php:115
+msgid "Date"
+msgstr "Fecha"
+
+#: page-contact.php:34 page-contact.php:45 template-parts/footer-menu.php:26
+msgid "Location"
+msgstr "Ubicación"
+
+#: page-contact.php:59
+msgid "Gallery"
+msgstr "Galería"
+
+#: single.php:29
+msgid "Contact us"
+msgstr "Contáctanos"
+
+#: single.php:30 template-parts/hero-calls-to-action.php:45
+msgid "Visit us"
+msgstr "Visítanos"
+
+#: single.php:37
+msgid "Related products"
+msgstr "Productos relacionados"
+
+#: template-parts/footer-menu.php:25 template-parts/hero-calls-to-action.php:25
+msgid "Hello"
+msgstr "Hola"
+
+#: template-parts/footer-menu.php:25
+msgid "Chat"
+msgstr "Chat"
+
+#: template-parts/hero-calls-to-action.php:30
+msgid "Chat us"
+msgstr "Escríbenos"
+
+#: template-parts/store-category-menu.php:12
+msgid "All"
+msgstr "Todos"

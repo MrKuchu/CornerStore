@@ -1,6 +1,7 @@
 <?php get_header() ?>
 
 <section id="about">
+
   
   <div class="copy copy-1">
 
@@ -45,6 +46,7 @@
     <img src="<?php echo get_about_image_4_url() ?>">
   
   </div>
+  
 
 </section>
 

@@ -1,27 +1,30 @@
 <?php get_header() ?>
 
-<?php get_template_part( 'template-parts/section-hero' ) ?>
+<?php get_template_part( 'template-parts/hero' ) ?>
 
 <section id="store">
-  <?php get_template_part( 'template-parts/navbar-store' ) ?>
-  <div class="products-container container-xxl"><?php
+  <?php 
+
+  get_template_part( 'template-parts/store', 'navbar' );
+
   global $wp_query;
   $term = $wp_query->queried_object; 
-  the_theme_products( array(
+  get_template_part( 'template-parts/store', 'products', array(
     'post_type' => 'product',
     'suppress_filters' => true,
     'tax_query' => array(
       array(
-          'taxonomy' => 'products-category',
-          'field' => 'slug',
-          'terms' => $term->slug
+        'taxonomy' => 'products-category',
+        'field' => 'slug',
+        'terms' => $term->slug
       )
     ),
     'post_per_page' => -1,
     'order' => 'ASC',
     'orderby' => 'menu_order'
-  ) ) ?>
-  </div>
+  ) ); 
+
+  ?>
 </section>
 
 <style>

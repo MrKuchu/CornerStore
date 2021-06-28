@@ -61,10 +61,10 @@
       </div>
     </div>
     <div class="section-card-body">
-      <img class="grid-1x1" src="<?php echo get_gallery_image_1_url() ?>" alt="">
-      <img class="grid-1x1" src="<?php echo get_gallery_image_2_url() ?>" alt="">
-      <img class="grid-2x2" src="<?php echo get_gallery_image_3_url() ?>" alt="">
-      <img class="grid-2x1" src="<?php echo get_gallery_image_4_url() ?>" alt="">
+      <img class="grid-1x1" src="<?php echo get_gallery_image_1_url() ?>">
+      <img class="grid-1x1" src="<?php echo get_gallery_image_2_url() ?>">
+      <img class="grid-2x2" src="<?php echo get_gallery_image_3_url() ?>">
+      <img class="grid-2x1" src="<?php echo get_gallery_image_4_url() ?>">
     </div>
   </div>
 
