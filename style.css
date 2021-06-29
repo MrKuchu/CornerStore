@@ -1045,7 +1045,6 @@ input {
   grid-auto-rows: 200px;
   grid-template-columns: 1fr;
   row-gap: 22px;
-  column-gap: 0px;
   padding: 0px;
 }
 
@@ -1054,6 +1053,15 @@ input {
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
+}
+
+@media (max-width: 992px) {
+
+  #contact .contact-gallery .section-card-body img[class^="grid"] {
+    grid-row-end: span 1;
+    grid-column-end: span 1;
+  }
+  
 }
 
 @media (min-width: 576px) {
@@ -1102,6 +1110,12 @@ input {
 
 }
 
+@media (min-width: 992px) {
+  #contact .contact-gallery .section-card-body {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (min-width: 1120px) {
 
   #contact {
@@ -1110,7 +1124,7 @@ input {
     margin-left: auto;
   }
 
-}
+} */
 
 
 
