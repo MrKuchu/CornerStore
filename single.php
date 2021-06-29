@@ -6,7 +6,7 @@
 
   <?php get_template_part( 'template-parts/store', 'navbar' ) ?>
 
-  <div class="product-container container-xxl">
+  <div class="product-container">
 
     <div class="product-card product-img">
       <?php 
