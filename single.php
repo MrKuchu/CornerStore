@@ -26,8 +26,12 @@
       </div>
 
       <div class="product-calls-to-action">
-        <a class="btn-buy"><?php _e( 'Contact us', 'cornerstore' ) ?></a>
-        <a><?php _e( 'Visit us', 'cornerstore' ) ?></a>
+        <a class="btn-buy" href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) ?>">
+          <?php _e( 'Contact us', 'cornerstore' ) ?>
+        </a>
+        <a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) ?>">
+          <?php _e( 'Visit us', 'cornerstore' ) ?>
+        </a>
       </div>
 
     </div>
