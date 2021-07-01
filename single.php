@@ -26,10 +26,10 @@
       </div>
 
       <div class="product-calls-to-action">
-        <a class="btn-buy" href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) ?>">
+        <a class="btn-buy" href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) ?>" target="_blank">
           <?php _e( 'Contact us', 'cornerstore' ) ?>
         </a>
-        <a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) ?>">
+        <a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) ?>" target="_blank">
           <?php _e( 'Visit us', 'cornerstore' ) ?>
         </a>
       </div>
