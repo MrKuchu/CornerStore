@@ -218,6 +218,7 @@ input {
   flex-direction: column;
   flex-grow: 1;
   height: 60px;
+  width: 100%;
   background-color: transparent;
 }
 
@@ -272,6 +273,7 @@ input {
     padding-right: 22px;
     padding-left: 22px;
     border-radius: 16px;
+    overflow: hidden;
   }
 
   .navbar .navbar-header {
