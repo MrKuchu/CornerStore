@@ -8,7 +8,7 @@
 
 <div class="navbar">
 
-  <nav class="navbar-container">
+  <nav class="navbar-content">
 
     <div class="navbar-header">
 
@@ -20,7 +20,7 @@
   
     <div class="navbar-body" id="navbar-primary-body">
       
-      <div class="navbar-body-container justify-content-between unselectable">
+      <div class="navbar-body-content justify-content-between unselectable">
 
         <?php get_template_part( 'template-parts/header', 'primary-menu' ) ?>
         <span class="horizontal-divider"></span>

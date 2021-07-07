@@ -6,9 +6,9 @@
 ?>
 
 
-<div class="navbar container-xxl">
+<div class="navbar navbar-store container-xxl">
 
-  <nav class="navbar-container">
+  <nav class="navbar-content">
 
     <div class="navbar-header">
 
@@ -20,7 +20,7 @@
   
     <div class="navbar-body" id="navbar-store-body">
       
-      <div class="navbar-body-container unselectable">
+      <div class="navbar-body-content unselectable">
 
         <?php get_template_part( 'template-parts/store', 'category-menu' ) ?>
         <span class="horizontal-divider"></span>

@@ -27,26 +27,15 @@ function customize( $wp_customize ) {
 
   // Site Identity
 
-    // Light Color
-    $wp_customize->add_setting( 'light_color', array(
-      'default'   => '#008591',
-      'transport' => 'refresh'
-    ) );
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'primary_color', array(
-      'label'    => __( 'Light Color', 'cornerstore' ),
-      'section'  => 'title_tagline',
-      'settings' => 'light_color',
-    ) ) );
-
-    // Dark Color
-    $wp_customize->add_setting( 'dark_color', array(
+    // Theme Color
+    $wp_customize->add_setting( 'theme_color', array(
       'default'   => '#0F676F',
       'transport' => 'refresh'
     ) );
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_color', array(
-      'label'    => __( 'Dark Color', 'cornerstore' ),
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'primary_color', array(
+      'label'    => __( 'Theme Color', 'cornerstore' ),
       'section'  => 'title_tagline',
-      'settings' => 'dark_color',
+      'settings' => 'theme_color',
     ) ) );
     
 

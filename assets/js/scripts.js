@@ -13,21 +13,4 @@ navbarStoreToggler.addEventListener('click', () => {
 } )
 
 
-// Hero Content margin top
-const heroContent = document.getElementById('hero-content')
-
-setHeroContentMarginTop()
-
-window.addEventListener('resize', setHeroContentMarginTop)
-
-function setHeroContentMarginTop() {
-  const heroContentHeight = heroContent.clientHeight
-  const headerHeight = document.getElementsByTagName('header')[0].clientHeight
-  const heroContentMarginTop = (document.documentElement.clientHeight - headerHeight - heroContentHeight - 26) / 2
-  if (heroContentMarginTop > 0) {
-    heroContent.style.marginTop = `${heroContentMarginTop}px`
-  }
-}
-
-
 

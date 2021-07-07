@@ -4,6 +4,14 @@
  *
  * Various useful functions that are used 
  * throughout the theme
+ * 
+ * - Colors
+ * - Info
+ * - Hero Section
+ * - Contact Section
+ * - About Section
+ * - Footer Section
+ * - Sanitization
  */
 
 
@@ -16,77 +24,16 @@
 
 /* Colors */
 
-function get_theme_light_color() {
-  $light_color = get_theme_mod( 'light_color' );
-  if( $light_color ) {
-    return $light_color;
-  } else {
-    return '#008591';
+function get_theme_color( $extra_brightness = 0, $opacity = 1 ) {
+  $theme_color = get_theme_mod( 'theme_color' );
+  if( $theme_color === false ) {
+    $theme_color = '#007A85';
   }
-}
-
-function get_theme_dark_color() {
-  $dark_color = get_theme_mod( 'dark_color' );
-  if( $dark_color ) {
-    return $dark_color;
-  } else {
-    return '#0F676F';
-  }
-}
-
-
-
-
-
-
-
-
-
-/* Hero */
-
-function get_hero_primary_text() {
-  $hero_primary_text = get_theme_mod( 'hero_primary_text' );
-  if( $hero_primary_text ) {
-    return $hero_primary_text;
-  } else {
-    return __( 'Your trusted store', 'cornerstore' );
-  }
-}
-
-function get_hero_secondary_text() {
-  $hero_secondary_text = get_theme_mod( 'hero_secondary_text' );
-  if( $hero_secondary_text ) {
-    return $hero_secondary_text;
-  } else {
-    return __( 'Find here what you need for your home, feel free to visit us whenever you like, we’ll be happy to help you. You can also visit us at our shop, we are waiting for you.', 'cornerstore' );
-  }
-}
-
-function get_hero_store_button() {
-  $hero_store_button = get_theme_mod( 'hero_store_button' );
-  if( $hero_store_button === false ) {
-    return 1;
-  } else {
-    return $hero_store_button;
-  }
-}
-
-function get_hero_chat_button() {
-  $hero_chat_button = get_theme_mod( 'hero_chat_button' );
-  if( $hero_chat_button === false ) {
-    return 1;
-  } else {
-    return $hero_chat_button;
-  }
-}
-
-function get_hero_location_button() {
-  $hero_location_button = get_theme_mod( 'hero_location_button' );
-  if( $hero_location_button === false ) {
-    return 1;
-  } else {
-    return $hero_location_button;
-  }
+  list( $r, $g, $b ) = sscanf( $theme_color, '#%02x%02x%02x' );
+  $brightness = sqrt( $r*$r + $g*$g + $b*$b );
+  $extra_brightness = ( $extra_brightness * 441.672956 ) / 100;
+  $brightness = ( $brightness + $extra_brightness ) / $brightness;
+  return 'rgba(' . round($r * $brightness) . ','. round($g * $brightness) . ','. round($b * $brightness) . ',' . $opacity . ')';
 }
 
 
@@ -150,6 +97,62 @@ function get_store_instagram() {
     return $url;
   } else {
     return '@CornerStore';
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Hero Section*/
+
+function get_hero_primary_text() {
+  $hero_primary_text = get_theme_mod( 'hero_primary_text' );
+  if( $hero_primary_text ) {
+    return $hero_primary_text;
+  } else {
+    return __( 'Your trusted store', 'cornerstore' );
+  }
+}
+
+function get_hero_secondary_text() {
+  $hero_secondary_text = get_theme_mod( 'hero_secondary_text' );
+  if( $hero_secondary_text ) {
+    return $hero_secondary_text;
+  } else {
+    return __( 'Find here what you need for your home, feel free to visit us whenever you like, we’ll be happy to help you. You can also visit us at our shop, we are waiting for you.', 'cornerstore' );
+  }
+}
+
+function get_hero_store_button() {
+  $hero_store_button = get_theme_mod( 'hero_store_button' );
+  if( $hero_store_button === false ) {
+    return 1;
+  } else {
+    return $hero_store_button;
+  }
+}
+
+function get_hero_chat_button() {
+  $hero_chat_button = get_theme_mod( 'hero_chat_button' );
+  if( $hero_chat_button === false ) {
+    return 1;
+  } else {
+    return $hero_chat_button;
+  }
+}
+
+function get_hero_location_button() {
+  $hero_location_button = get_theme_mod( 'hero_location_button' );
+  if( $hero_location_button === false ) {
+    return 1;
+  } else {
+    return $hero_location_button;
   }
 }
 
@@ -325,7 +328,7 @@ function get_about_image_4_url() {
 
 
 
-/* Others */
+/* Footer Section */
 
 function get_theme_background_image_url() {
   $url = get_theme_mod( 'background_image' );
@@ -335,6 +338,18 @@ function get_theme_background_image_url() {
     return 'https://i.imgur.com/OY4hBoi.jpg';
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Sanitization */
 
 function checkbox_sanitization( $input ) {
   if ( true === $input ) {

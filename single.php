@@ -2,13 +2,13 @@
 
 <?php get_template_part( 'template-parts/hero' ) ?>
 
-<section id="store">
+<section id="product">
 
   <?php get_template_part( 'template-parts/store', 'navbar' ) ?>
 
-  <div class="product-container">
+  <div class="product-content">
 
-    <div class="product-card product-img">
+    <div class="product-img product-card">
       <?php 
       $post_id = get_the_ID();
       $post_price = get_post_meta( $post_id, '_product_price', true );
@@ -17,20 +17,17 @@
       ?>
     </div>
 
-    <div class="product-details-container">
+    <div class="product-details">
 
-      <div class="product-details">
+      <div class="product-details-content">
         <h2><?php the_title() ?></h2>
         <hr>
         <?php the_content() ?>
       </div>
 
       <div class="product-calls-to-action">
-        <a class="btn-buy" href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) ?>" target="_blank">
+        <a class="cta-primary" href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) ?>" target="_blank">
           <?php _e( 'Contact us', 'cornerstore' ) ?>
-        </a>
-        <a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) ?>" target="_blank">
-          <?php _e( 'Visit us', 'cornerstore' ) ?>
         </a>
       </div>
 
@@ -39,7 +36,7 @@
     <div class="related-products">
 
       <h4><?php _e( 'Related products', 'cornerstore' ) ?></h4>
-      <div class="related-products-container">  
+      <div class="related-products-content">  
         <?php
         get_template_part( 'template-parts/store', 'products', array(
           'post_type' => 'product',
