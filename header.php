@@ -20,6 +20,15 @@
 
 <body>
 
-<header class="container-xxl">
-  <?php get_template_part( 'template-parts/header', 'navbar' ) ?>
-</header> 
+<?php
+if( $args['navbar'] !== 'false' ) {
+  ?>
+
+  <header class="container-xxl">
+    <?php get_template_part( 'template-parts/header', 'navbar' ) ?>
+  </header>
+  
+  <?php
+}
+
+ 

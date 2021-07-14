@@ -27,8 +27,6 @@ Tags: custom-background, custom-colors, custom-menu, custom-logo, featured-image
   - Setup
   - Utilities
   - Components
-    - Navbar
-    - Card
 
   - Header Section
   - Hero Section
@@ -51,14 +49,9 @@ Tags: custom-background, custom-colors, custom-menu, custom-logo, featured-image
 /**
  * Setup
  * 
- * Add variables and fonts.
  * Reassign default styles of HTML tags.
+ * Add fonts.
  */
-
-:root {
-  --color-font-light: #edf0f1;
-  --color-font-dark: #3e3e3e;
-}
 
 @font-face { 
   font-family: 'Poppins-Montserrat'; 
@@ -112,78 +105,70 @@ input {
 
 
 
-/*-------- 1. Utilities ------------------------------*/
+/**
+ * Utilities
+ * 
+ * Variables and reusable classes.
+ */
 
-/* Displays */
+:root {
+--color-font-light: #edf0f1;
+--color-font-dark: #3e3e3e;
+}
+
 .d-block {
   display: block !important;
 }
 
-/* Flex */
 .justify-content-between {
   justify-content: space-between !important;
 }
 
-/* Box Model */
 .vh-100 {
   height: 100vh;
 }
 
-/* Containers */
 .container-xxl {
   max-width: 1440px;
 }
-
 @media (min-width: 1440px) {
-
   .container-xxl {
     margin-right: auto;
     margin-left: auto;
   }
-
 }
 
-/* Grid */
 .grid-1x1 {
   grid-row-end: span 1;
   grid-column-end: span 1;
 }
-
 .grid-1x2 {
   grid-row-end: span 1;
   grid-column-end: span 1;
 }
-
 .grid-2x1 {
   grid-row-end: span 1;
   grid-column-end: span 1;
 }
-
 .grid-2x2 {
   grid-row-end: span 1;
   grid-column-end: span 1;
 }
-
 @media (min-width: 576px) {
-
   .grid-1x2 {
     grid-row-end: span 2;
     grid-column-end: span 1;
   }
-
   .grid-2x1 {
     grid-row-end: span 1;
     grid-column-end: span 2;
   }
-
   .grid-2x2 {
     grid-row-end: span 2;
     grid-column-end: span 2;
   }
-
 }
 
-/* Miscellaneous */
 .unstyled-ul {
   padding-left: 0px;
   margin-top: 0px;
@@ -202,7 +187,11 @@ input {
 
 
 
-/*-------- 2.1 Components: Navbar -------------------*/
+/**
+ * Components
+ * 
+ * Classes for reusable components
+ */
 
 .navbar {
   display: flex;
@@ -211,7 +200,6 @@ input {
   padding-right: 16px;
   padding-left: 16px;
 }
-
 .navbar .navbar-content {
   position: relative;
   display: flex;
@@ -221,7 +209,6 @@ input {
   width: 100%;
   background-color: transparent;
 }
-
 .navbar .navbar-header {
   z-index: 4;
   display: flex;
@@ -233,11 +220,9 @@ input {
   background-color: var(--color-primary);
   border-radius: 12px;
 }
-
 .navbar .vertical-divider {
   display: none;
 }
-
 .navbar .navbar-body {
   position: absolute;
   top: 0;
@@ -250,24 +235,18 @@ input {
   border: solid 3px var(--color-primary);
   border-radius: 12px;
 }
-
 .navbar .navbar-body-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 @media (min-width: 576px) {
-
   .navbar {
     padding-right: 30px;
     padding-left: 30px;
   }
-
 }
-
 @media (min-width: 992px) {
-
   .navbar .navbar-content {
     flex-direction: row; 
     padding-right: 22px;
@@ -275,21 +254,17 @@ input {
     border-radius: 16px;
     overflow: hidden;
   }
-
   .navbar .navbar-header {
     padding-right: 0px;
     padding-left: 0px;
     background-color: transparent;
   }
-
   .navbar .vertical-divider {
     display: inline-block;
   }
-
   .navbar .burger-menu-icon {
     display: none;
   }
-
   .navbar .navbar-body {
     position: relative;
     display: block;
@@ -299,37 +274,22 @@ input {
     background-color: transparent;
     border: none;
   }
-
   .navbar .navbar-body-content {
     flex-direction: row;
   }
-
   .navbar .horizontal-divider {
     display: none;
   }
-
 }
-
-
-
-
-
-
-
-
-
-/*-------- 2.5 Components: Card ---------------------*/
 
 .product-card {
   display: inline-block;
   overflow: hidden;
   border-radius: 16px;
 }
-
 .product-card:hover {
   text-decoration: none;
 }
-
 .product-card figure {
   position: relative;
   z-index: 1;
@@ -338,7 +298,6 @@ input {
   height: 100%;
   margin: 0;
 }
-
 .product-card figure:after {
   position: absolute;
   top: 0;
@@ -349,14 +308,12 @@ input {
   content: '';
   background: linear-gradient(170deg, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.4) 84%, rgba(0, 0, 0, 0.6) 92%);
 } 
-
 .product-card figure img {
   display: inline-block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .price-container {
   position: relative;
   top: -56px;
@@ -366,55 +323,38 @@ input {
   justify-content: flex-end;
   padding-right: 20px;
 }
-
 .price-container span {
   font-weight: 600;
   color: var(--color-font-light);
 }
-
 .price-container .dollar-sign {
   align-self: start;
   margin-right: 2px;
   margin-left: auto;
   font-size: 1.2em;
 }
-
 .price-container .price-dollars {
   margin-top: -5px;
   font-size: 2.4em;
 }
-
 .price-container .price-pennies {
   font-size: 1.8em;
 }
-
-
-
-
-
-
-
-
-
-/*-------- 2.5 Components: Section Card -------------*/
 
 .section-card .section-card-header{
   position: relative;
   display: flex;
   z-index: 2;
 }
-
 .section-card .tab {
   margin-bottom: -2px;
   margin-left: 16px;
 }
-
 .section-card .tab h3 {
   margin: 0px 16px 6px;
   font-size: 1.125rem;
   font-weight: 400;
 }
-
 .section-card .tab span {
   display: flex;
   width: 100%;
@@ -422,7 +362,6 @@ input {
   border: 2px solid var(--color-primary);
   border-radius: 2px;
 }
-
 .section-card .section-card-body {
   position: relative;
   display: grid;
@@ -432,53 +371,45 @@ input {
   border-radius: 16px;
   overflow: hidden;
 }
-
 .section-card .section-card-body .item {
   padding: 18px 20px 22px;
   background-color: var(--color-primary);
   border-radius: 6px;
 }
-
 .section-card .section-card-body .item-title {
   display: flex;
   gap: 8px;
 }
-
 .section-card .section-card-body .whatsapp .item-title::before {
   content: '';
   width: 23px;
   height: 22px;
   background-image: url(assets/svg/whatsapp.svg);
 }
-
 .section-card .section-card-body .facebook .item-title::before {
   content: '';
   width: 22px;
   height: 22px;
   background-image: url(assets/svg/facebook.svg);
 }
-
 .section-card .section-card-body .instagram .item-title::before {
   content: '';
   width: 22px;
   height: 22px;
   background-image: url(assets/svg/instagram.svg);
 }
-
 .section-card .section-card-body .twitter .item-title::before {
   content: '';
   width: 28px;
   height: 22px;
   background-image: url(assets/svg/twitter.svg);
 }
-
 .section-card .section-card-body .email .item-title::before {
   content: '';
   width: 25px;
   height: 21px;
   background-image: url(assets/svg/email.svg);
 }
-
 .section-card .section-card-body .location .item-title::before {
   content: '';
   width: 17px;
@@ -491,14 +422,19 @@ input {
 
 
 
-/*-------- 3. Header Section ---------------------------*/
+
+
+
+/**
+ * Header Section
+ */
 
 .custom-logo-link {
   display: flex;
-  align-content: center;
-  max-width: 200px;
+  align-items: center;
   max-height: 56px;
 }
+
 
 .vertical-divider {
   display: none;
@@ -606,7 +542,9 @@ input {
 
  
 
-/*-------- 4. Hero Section ---------------------------*/
+/**
+ * Hero Section
+ */
 
 #hero {
   height: calc(100vh - 104px);
@@ -663,7 +601,6 @@ input {
 }
 
 @media (min-width: 576px) {
-
   .hero-calls-to-actions-container {
     flex-direction: row;
     flex-wrap: wrap;
@@ -671,23 +608,18 @@ input {
     gap: 14px;
     margin-top: 24px;
   }
-
 }
 
 @media (min-width: 768px) {
-
   .hero-title {
     font-size: 3rem;
   }
-
   .hero-copy {
     font-size: 1.5rem;
   }
-
   #hero-content {
     max-width: 660px;
   }
-
 }
 
 
@@ -698,7 +630,9 @@ input {
 
 
 
-/*-------- 5. Store Section --------------------------*/
+/**
+ * Store Section
+ */
 
 #store {
   background-color: var(--color-primary-dark);
@@ -806,12 +740,10 @@ input {
 }
 
 @media (min-width: 576px) {
-
   .navbar-store {
     padding-right: 30px;
     padding-left: 30px;
   }
-
   .products-container {
     grid-template-columns: repeat(2, 1fr);
     padding-top: 0px;
@@ -819,36 +751,29 @@ input {
     padding-left: 38px;
     gap: 22px;
   }
-
 }
 
 @media (min-width: 992px) {
-
   .navbar-store .navbar-content {
     background-color: var(--color-primary);
   }
-
   .navbar-store .navbar-body-content {
     flex-direction: row-reverse;
     justify-content: flex-end;
     gap: 22px;
   }
-
   .navbar-store .store-categories-menu .navbar-menu-ul {
     flex-wrap: nowrap;
   }
-
   .product-category {
     padding-top: 12px;
     padding-bottom: 12px;
   }
-
   .products-container {
     grid-template-columns: repeat(4, 1fr);
     padding-right: 60px;
     padding-left: 60px;
   }
-
 }
 
 
@@ -858,7 +783,9 @@ input {
 
 
 
-/*-------- 6. Product Section ------------------------*/
+/**
+ * Product Section
+ */
 
 #product {
   background-color: var(--color-primary-dark);
@@ -954,41 +881,33 @@ input {
 }
 
 @media (min-width: 576px) {
-
   .product-content {
     padding-right: 38px;
     padding-left: 38px;
   }
-
   .related-products-content .products-container {
     padding-right: 0px;
     padding-left: 0px;
   }
-
 }
 
 @media (min-width: 768px) {
-
   .related-products-content .products-container {
     grid-template-columns: 1fr 1fr 1fr;
   }
-
 }
 
 @media (min-width: 1060px) {
-
   .product-content {
     display: grid;
     justify-content: center;
     grid-template-columns: max(660px) 300px;
     column-gap: 22px;
   }
-
   .product-img {
     height: 442px;
     flex-shrink: 0;
   }
-
   .product-details {
     position: sticky;
     top: 104px;
@@ -997,24 +916,19 @@ input {
     margin-top: 0px;
     margin-bottom: 0px;
   }
-
   .product-details {
     flex-grow: 1;
   }
-
   .related-products {
     margin-top: -68px;
   }
-
   .related-products > h4 {
     margin-right: 0px;
     margin-left: 0px;
   }
-
   .related-products-content .products-container {
     grid-template-columns: 1fr 1fr;
   }
-
 }
 
 
@@ -1025,7 +939,9 @@ input {
 
 
 
-/*-------- 7. Contact Section ------------------------*/
+/**
+ * Contact Section
+ */
 
 #contact {
   display: grid;
@@ -1069,16 +985,13 @@ input {
 }
 
 @media (max-width: 992px) {
-
   #contact .contact-gallery .section-card-body img[class^="grid"] {
     grid-row-end: span 1;
     grid-column-end: span 1;
   }
-  
 }
 
 @media (min-width: 576px) {
-
   #contact {
     grid-template-columns: 1fr 1fr;
     padding-right: 30px;
@@ -1086,41 +999,28 @@ input {
     padding-left: 30px;
     column-gap: 22px;
   }
-
   #contact .contact-location {
     margin-top: 0px;
     margin-bottom: 0px;
     order: 1;
   }
-
   #contact .contact-info {
     position: sticky;
     top: 10px; 
     order: 2;
   }
-
   #contact .contact-gallery {
     margin-top: -60px;
     order: 3;
   }
-
 }
 
-@media (min-width: 768px) {
-
+@media (min-width: 880px) {
   #contact {
     grid-template-columns: auto 343px;
-  }
-
-}
-
-@media (min-width: 768px) {
-  
-  #contact {
     padding-right: 60px;
     padding-left: 60px;
   }
-
 }
 
 @media (min-width: 992px) {
@@ -1130,15 +1030,12 @@ input {
 }
 
 @media (min-width: 1120px) {
-
   #contact {
     max-width: 1220px;
     margin-right: auto;
     margin-left: auto;
   }
-
-} */
-
+}
 
 
 
@@ -1147,7 +1044,11 @@ input {
 
 
 
-/*-------- 8. About Section --------------------------*/
+
+/**
+ * About Section
+ */
+
 #about {
   display: flex;
   flex-direction: column;
@@ -1187,20 +1088,16 @@ input {
 }
 
 @media (min-width: 992px) {
-
   #about .copy {
     flex-direction: row;
     align-items: center;
     gap: 16px;
     max-width: 100%;
   }
-
-
   #about .copy .text,
   #about .copy img {
     width: 440px;
   }
-
   #about .copy-2 .text,
   #about .copy-4 .text {
     order: 1;
@@ -1214,7 +1111,11 @@ input {
 
 
 
-/*-------- 9. Footer Section -------------------------*/
+
+
+/**
+ * Footer Section
+ */
 
 .background {
   position: fixed;
