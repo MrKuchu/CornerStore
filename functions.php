@@ -85,6 +85,8 @@ function primary_menu_extra_item( $items, $args ) {
   if ( $args->theme_location === 'primary-menu' ) {
     $items = '<li><a href="'. home_url() .'/#store">' . __( 'Store', 'cornerstore' ) . '</a></li>' . $items;
     return $items;
+  } else {
+    return $items;
   }
 }
 add_filter( 'wp_nav_menu_items', 'primary_menu_extra_item', 10, 2 );

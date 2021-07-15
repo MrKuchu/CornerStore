@@ -3,20 +3,22 @@
  * Displays the footer menu
  */ 
 
+?>
 
-if ( has_nav_menu( 'footer-menu' ) ) {
 
-  wp_nav_menu( 
-    array(
-      'theme_location' => 'footer-menu',
-      'container_class' => 'footer-menu'
-    )
-  );
+<footer>
+  <?php
+  if ( has_nav_menu( 'footer-menu' ) ) {
 
-} else { 
-  ?>
+    wp_nav_menu( 
+      array(
+        'theme_location' => 'footer-menu',
+        'container_class' => 'footer-menu'
+      )
+    );
 
-  <footer>
+  } else { 
+    ?>
     <div class="footer-menu container-xxl">
       <ul>
         <li><a href="<?php echo home_url() . '/#store' ?>" target="_blank"><?php _e( 'Store', 'cornerstore' ) ?></a></li>
@@ -26,7 +28,8 @@ if ( has_nav_menu( 'footer-menu' ) ) {
         <li><a href="<?php echo get_store_location() ?>" target="_blank"><?php _e( 'Location', 'cornerstore' ) ?></a></li>
       </ul>
     </div>
-  </footer>
-  
-  <?php 
-}
+    <?php 
+  }
+  ?>
+
+</footer>
